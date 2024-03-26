@@ -1,27 +1,33 @@
 @php
 $links = [
     [
-        "href" => route('home'),
-        "text" => "Dasboard",
-        "icon" => "fas fa-home",
-        "is_multi" => false
+      "href" => route('home'),
+      "text" => "Dasboard",
+      "icon" => "fas fa-home",
+      "is_multi" => false
     ],
     [
-        "text" => "Kelola Akun",
-        "icon" => "fas fa-users",
-        "is_multi" => true,
-        "href" => [
-            [
-                "section_text" => "Data Akun",
-                "section_icon" => "far fa-circle",
-                "section_href" => route('akun.index')
-            ],
-            [
-                "section_text" => "Tambah Akun",
-                "section_icon" => "far fa-circle",
-                "section_href" => route('akun.add')
-            ]
+      "href" => route('sp2bj.index'),
+      "text" => "Pengajuan",
+      "icon" => "fas fa-home",
+      "is_multi" => false
+    ],
+    [
+      "text" => "Kelola Akun",
+      "icon" => "fas fa-users",
+      "is_multi" => true,
+      "href" => [
+        [
+          "section_text" => "Data Akun",
+          "section_icon" => "far fa-circle",
+          "section_href" => route('akun.index')
+        ],
+        [
+          "section_text" => "Tambah Akun",
+          "section_icon" => "far fa-circle",
+          "section_href" => route('akun.add')
         ]
+      ]
     ]
 ];
 $navigation_links = json_decode(json_encode($links));

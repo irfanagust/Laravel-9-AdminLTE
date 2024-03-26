@@ -27,6 +27,7 @@ class HomeController extends Controller
      */
     public function index()
     {
+        // dd(asset('/css/stepper.css'));
         return view('home');
     }
 

@@ -4,6 +4,7 @@ use App\Http\Controllers\AkunController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\SP2BJController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,8 +23,11 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::group(['prefix' => 'dashboard/admin'], function () {
+Route::group(['prefix' => 'dashboard'], function () {
     Route::get('/', [HomeController::class, 'index'])->name('home');
+
+    Route::resource('sp2bj', SP2BJController::class);
+    Route::post('sp2bj-showdata', [SP2BJController::class, 'datatable'])->name('sp2bj.datatable');
 
     Route::group(['prefix' => 'profile'], function () {
         Route::get('/', [HomeController::class, 'profile'])->name('profile');

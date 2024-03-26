@@ -15,5 +15,10 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // \App\Models\User::factory(10)->create();
+        $this->call(HarbourSeeder::class);
+        $this->call(ToolSeeder::class);
+        $this->call(ListToolSeeder::class);
+        $this->call(CheckingProcessSeeder::class);
+        // $this->call(HarbourSeeder::class);
     }
 }
