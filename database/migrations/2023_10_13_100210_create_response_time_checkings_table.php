@@ -16,7 +16,10 @@ return new class extends Migration
         Schema::create('response_time_checkings', function (Blueprint $table) {
             $table->id();
             $table->integer('response_time');
-            $table->date('date_response_time_checking');
+            $table->date('date_checking_response_time');
+
+            $table->unsignedBigInteger('ceklist_date_id');
+            $table->foreign('ceklist_date_id')->references('id')->on('ceklist_dates')->onDelete('restrict');
 
             $table->unsignedBigInteger('list_tool_id');
             $table->foreign('list_tool_id')->references('id')->on('list_tools')->onDelete('restrict');

@@ -13,12 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('list_tools', function (Blueprint $table) {
+        Schema::create('ceklist_dates', function (Blueprint $table) {
             $table->id();
-            $table->string('description');
-            $table->string('column');
-            $table->unsignedBigInteger('tool_id');
-            $table->foreign('tool_id')->references('id')->on('tools')->onDelete('restrict');
+            $table->date('date_checking_response_time');
+            $table->string('created_by');
             $table->timestamps();
         });
     }
@@ -30,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('list_tools');
+        Schema::dropIfExists('ceklist_dates');
     }
 };

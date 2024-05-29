@@ -28,7 +28,13 @@ $links = [
           "section_href" => route('akun.add')
         ]
       ]
-    ]
+    ],
+    [
+      "href" => route('ceklis.index'),
+      "text" => "Ceklis",
+      "icon" => "fas fa-list-alt",
+      "is_multi" => false
+    ],
 ];
 $navigation_links = json_decode(json_encode($links));
 @endphp

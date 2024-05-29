@@ -111,19 +111,19 @@ class ListToolSeeder extends Seeder
             ],
             [
                 'tool_id' => 6,
-                'description' => '1'
+                'description' => 'Trunstile 1'
             ],
             [
                 'tool_id' => 6,
-                'description' => '2'
+                'description' => 'Trunstile 2'
             ],
             [
                 'tool_id' => 6,
-                'description' => '3'
+                'description' => 'Trunstile 3'
             ],
             [
                 'tool_id' => 6,
-                'description' => '4'
+                'description' => 'Trunstile 4'
             ],
             [
                 'tool_id' => 6,
